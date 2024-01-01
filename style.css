@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #877f7f, #157777, #4e085f, #790909);
+}
+
+.container {
+    width: 100%;
+    max-width: 540px; /* Adjust the max-width as needed */
+    padding: 10px;
+}
+
+.to_do_box {
+    background: white;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    margin-right: 10px; /* Adjust margin as needed */
+    max-width: 30px; /* Set the maximum width for the image */
+    height: auto; /* Adjust margin as needed */
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+
+
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2; /* Set your desired background color */
+    padding: 10px;
+    border-radius: 10px; /* Set the border radius for rounded corners */
+    transition: background-color 0.3s ease; /* Optional: Add a smooth transition effect */
+}
+
+input:hover,
+input:focus {
+    background-color: #e0e0e0; /* Set a different background color on hover or focus */
+}
+
+.btn {
+    background-color: #8361af;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background-color: #226da7;
+}
+
+ul li{
+    display: flex;
+    list-style: none;
+    font-size: 17px;
+    user-select: none;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    position: relative;
+    /* margin-bottom: 10px; */
+}
+
+ul li::before {
+    content: '';
+    /* display: inline-block; */
+    width: 20px; /* Set the width of the circle */
+    height: 20px; /* Set the height of the circle */
+    background-image: url("unchecked.png"); /* Set the color of the circle */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute;
+    background-size: cover;
+    left: 20px; /* Adjust the distance between the circle and the text */
+    top: 50%; /* Center the circle vertically */
+    transform: translateY(-50%); /* Adjust for vertical centering */
+}
+
+ul li.checked{
+    background: #fff;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    content: '';
+    /* display: inline-block; */
+    width: 20px; /* Set the width of the circle */
+    height: 20px; /* Set the height of the circle */
+    background-image: url("checked.png"); /* Set the color of the circle */
+    border-radius: 50%; /* Make it a circle */
+    position: absolute;
+    background-size: cover;
+    left: 20px; /* Adjust the distance between the circle and the text */
+    top: 50%; /* Center the circle vertically */
+    transform: translateY(-50%);
+    /* background-color: red; */
+    /* background: url("checked.png"); */
+}
+
+.delete_icon{
+    width: 20px;
+    height: 20px;
+    right: 0;
+}
+
+ul li span{
+    right: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    line-height: 40px;
+    top: 5px;
+    text-align: center;
+    /* margin-left: 370px; */
+}
+
+.delete_icon:hover{
+    background : #edeef0;
+}
